@@ -16,7 +16,13 @@ export class ERCToken extends BaseCurrency {
    */
   public readonly address: string
 
-  public constructor(chainId: number | string, address: string, decimals: number, symbol: string = 'ERCToken', name?: string) {
+  public constructor(
+    chainId: number | string,
+    address: string,
+    decimals: number,
+    symbol: string = 'ERCToken',
+    name?: string
+  ) {
     super(chainId, decimals, symbol, name)
     this.address = validateAndParseAddress(address)
   }
